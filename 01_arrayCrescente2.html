@@ -4,9 +4,22 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2).
 
     //ENTRADA
+    const numero = Number(prompt(`Informe um Número`));
+    const numeroDois = Number(prompt(`Informe outro um Número`));
 
 
     //PROCESSAMENTO
+    if(numeroDois > numero){
+    const array = [`${numero} - ${numeroDois}`]
+    alert(array)
+    }
+    else if (numero > numeroDois) {
+        const array = [`${numeroDois} - ${numero}`]
+        alert(array)
+    }
+    else {
+        alert(`Números Inválidos`);
+    }
 
 
     //SAÍDA
