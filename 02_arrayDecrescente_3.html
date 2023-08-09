@@ -4,11 +4,23 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
-
+    const numeroUm = Number(prompt(`Informe um número`))
+    const numeroDois = Number(prompt(`Informe outro número`))
+    const numeroTres = Number(prompt(`Informe outro número`))
     //PROCESSAMENTO
-
-
+    let decrescente = []
+    if (numeroUm > numeroDois && numeroUm > numeroTres) 
+        if (numeroDois > numeroTres) decrescente = [numeroUm, numeroDois, numeroTres];
+        else decrescente = [numeroUm, numeroTres, numeroDois];
+    else if (numeroDois > numeroUm && numeroDois > numeroTres) 
+        if (numeroUm > numeroTres) decrescente = [numeroDois, numeroUm, numeroTres];
+        else decrescente= [numeroDois, numeroTres, numeroUm];
+    else if (numeroDois > numeroUm && numeroDois > numeroTres) if (numeroUm > numeroTres)  decrescente = [numeroDois, numeroUm, numeroTres];
+        else decrescente= [numeroDois, numeroTres, numeroUm];
+    else if (numeroTres > numeroUm && numeroTres > numeroDois) if (numeroUm > numeroDois) decrescente = [numeroTres, numeroUm, numeroDois];
+        else  decrescente= [numeroTres, numeroDois, numeroUm];
+    
+    else alert(`Valores inválidos!`)
     //SAÍDA
-
+    alert(decrescente.join(" - "))
 </script>
