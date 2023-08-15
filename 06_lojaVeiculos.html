@@ -11,59 +11,43 @@
 
     //ENTRADA
     const carro = prompt(`Qual carro você quer inserir?`).trim();
-    const tipo = Number(prompt(`Qual tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`)).trim();
+    const tipo = Number(prompt(`Qual tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`));
     const carroDois = prompt(`Qual outro carro você quer inserir?`).trim();
-    const tipo2 = Number((`Qual outro tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`)).trim();
+    const tipo2 = Number(prompt(`Qual outro tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`));
     const carroTres = prompt(`Qual outro carro você quer inserir?`).trim();
-    const tipo3 = Number(prompt(`Qual outro tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`)).trim();
+    const tipo3 = Number(prompt(`Qual outro tipo de carro você quer inserir? SUV - 1, Sedan - 2 ou Hatch - 3`));
 
 
     //PROCESSAMENTO
     const carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     const carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     const carrosHatch = ["308", "Focus", "i30"];
-    if (tipo == 1) {
-        const carrosSUVnovo = carrosSUV.concat(carro);
-        if (tipo2 == 1) {
-            const carrosSUVnovo = carrosSUV.concat(carroDois);
-            if (tipo3 == 1) {
-                const carrosSUVnovo = carrosSUV.concat(carroTres)
-            }
-        }
-        if (tipo2 == 2) {
-            const carrosnovo = carrosSUV.concat(carroDois);
-            if (tipo3 == 1) {
-                const carrosSUVnovo = carrosSUV.concat(carroTres)
-            }
-        }
-        if (tipo2 == 2) {
-            const carrosSUVnovo = carrosSUV.concat(carroDois);
-            if (tipo3 == 1) {
-                const carrosSUVnovo = carrosSUV.concat(carroTres)
-            }
-        }
+    switch (tipo) {
+        case 1: carrosSUV.push(carro);
+            break;
+        case 2: carrosSedan.push(carro);
+            break;
+        case 3: carrosHatch.push(carro);
+            break;
     }
-    if (tipo == 2) {
-        const carrosSedanNovo = carrosSedan.concat(carro);
-        if (tipo2 == 1) {
-            const carrosSUVnovo = carrosSUV.concat(carroDois);
-            if (tipo3 == 1) {
-                const carrosSUVnovo = carrosSUV.concat(carroTres)
-            }
-        }
+    switch (tipo2) {
+        case 1: carrosSUV.push(carroDois);
+            break;
+        case 2: carrosSedan.push(carroDois);
+            break;
+        case 3: carrosHatch.push(carroDois);
+            break;
     }
-    if (tipo == 3) {
-        const carrosHatchnovo = carrosHatch.concat(carro);
-        if (tipo2 == 1) {
-            const carrosSUVnovo = carrosSUV.concat(carroDois);
-            if (tipo3 == 1) {
-                const carrosSUVnovo = carrosSUV.concat(carroTres)
-            }
-        }
+    switch (tipo3) {
+        case 1: carrosSUV.push(carroTres);
+            break;
+        case 2: carrosSedan.push(carroTres);
+            break;
+        case 3: carrosHatch.push(carroTres);
+            break;
     }
-
-
-
     //SAÍDA
+    alert(`As listas são: ${carrosSUV} / ${carrosSedan} / ${carrosHatch}`)
+
 
 </script>

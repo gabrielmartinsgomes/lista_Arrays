@@ -10,9 +10,21 @@
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
     //ENTRADA
+    const cor = Number(prompt(`Informe uma cor: azul - 0, amarelo - 1, verde - 2, branco - 3, preto - 4, marrom - 5, cinza - 6`));
+    
 
 
     //PROCESSAMENTO
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const numAlea = Math.floor(Math.random() * 7);
+    const corInformada = nomeCores.splice(numAlea, 1)
+
+    if (cor == numAlea) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`)
+    }
+    else {
+        alert(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`)
+    }
 
 
     //SAÍDA
