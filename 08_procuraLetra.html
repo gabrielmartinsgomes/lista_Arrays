@@ -11,6 +11,14 @@
 
 
     //PROCESSAMENTO
+    let arrayPalavra = [palavra].toString();
+    const buscaLetra = arrayPalavra.indexOf(letra,0);
+    if (buscaLetra === -1) {
+        alert(`Essa letra não existe`);
+    }
+    else {
+        alert(`Essa letra existe e está no índice: ${buscaLetra + 1}`);
+    }
 
 
     //SAÍDA
